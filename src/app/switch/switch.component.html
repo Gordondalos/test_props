@@ -1,0 +1,21 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-sm-12">
+           <!--<span *ngFor="let prop of properties">-->
+
+
+                <span *ngFor="let prop of properties" class="pl-4 pointer">
+                    <p-radioButton
+                            name="group1"
+                            value="{{prop.count}}"
+                            label="{{prop.title}}"
+                            [(ngModel)]="selectedValue"
+                            (ngModelChange)="change()"
+                            inputId="opt{{prop.count}}"></p-radioButton>
+                </span>
+
+
+
+        </div>
+    </div>
+</div>

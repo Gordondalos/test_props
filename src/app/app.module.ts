@@ -1,18 +1,31 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
+import {SliderModule, RadioButtonModule} from 'primeng/primeng';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {SwitchComponent} from './switch/switch.component';
+import {SwitchService} from './services/switch.service';
+import {ScenarioComponent} from './scenario/scenario.component';
+import {HttpModule} from '@angular/http';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SwitchComponent,
+    ScenarioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SliderModule,
+    FormsModule,
+    RadioButtonModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [SwitchService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
