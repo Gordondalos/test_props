@@ -22,8 +22,10 @@ export class SwitchComponent implements OnInit {
 
   selectedValue = '1';
 
-  constructor(
-    private switchService: SwitchService) {
+  constructor(private switchService: SwitchService) {
+    this.switchService.setData.subscribe((data) => {
+      this.props = data;
+    });
   }
 
   async ngOnInit() {

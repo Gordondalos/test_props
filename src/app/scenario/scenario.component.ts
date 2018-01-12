@@ -14,18 +14,19 @@ export class ScenarioComponent implements OnInit {
   countElement = 0;
   countProperties = 0;
   oldProps: IPropModel[] = [];
-  props: IPropModel[] = [
-    {id: 1, value: 0, elements: 5, res: 0}
-  ];
+  props: IPropModel[] = [];
+
 
   constructor(private switchService: SwitchService) {
     this.switchService.changeCountProp.subscribe((arg) => {
       this.setCountScenario(arg);
     });
+
+
   }
 
   ngOnInit() {
-    this.setCountScenario(this.props);
+
   }
 
 
