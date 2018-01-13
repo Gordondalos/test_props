@@ -29,7 +29,7 @@ export class SwitchComponent implements OnInit {
   }
 
   async ngOnInit() {
-    this.props = await this.switchService.getData();
+    this.switchService.getData();
   }
 
   change() {

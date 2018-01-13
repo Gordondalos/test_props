@@ -10,7 +10,7 @@ import {IPropModel} from '../models/prop.model';
 })
 export class ScenarioComponent implements OnInit {
 
-  lock = false;
+  lock = true;
   countElement = 0;
   countProperties = 0;
   oldProps: IPropModel[] = [];
@@ -21,8 +21,6 @@ export class ScenarioComponent implements OnInit {
     this.switchService.changeCountProp.subscribe((arg) => {
       this.setCountScenario(arg);
     });
-
-
   }
 
   ngOnInit() {

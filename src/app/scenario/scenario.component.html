@@ -1,3 +1,11 @@
+<div class="container pb-4">
+  <div class="row">
+    <div class="col-sm-7"></div>
+    <div class="col-sm-1 spec-width"></div>
+    <div class="col-sm-2">Проценты</div>
+    <div class="col-sm-2">Количество</div>
+  </div>
+</div>
 <div class="container">
   <div class="row" *ngFor="let prop of props">
     <div class="col-sm-7 pt-3">
@@ -18,3 +26,17 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div *ngFor="let prop of props; let i = index">
+        <span>{{i}}</span>
+        <span>Свойство {{prop.id}}</span>,
+        <span>элементов {{prop.res}}</span>,
+        <span>= {{prop.value}}%</span>
+      </div>
+    </div>
+  </div>
+</div>
+

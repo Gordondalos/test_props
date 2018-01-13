@@ -18,7 +18,7 @@ export class SwitchService {
     });
   }
 
-  async getData(): Promise<IPropModel[]> {
+  async getData() {
     try {
       let response: any;
       if (this.shot < 5) {
@@ -44,9 +44,9 @@ export class SwitchService {
     } catch (e) {
       if (this.shot < 6) {
         setTimeout(() => {
-          this.shot *= 2;
           console.log(2000 * this.shot);
-          return this.getData();
+          this.shot *= 2;
+          this.getData();
         }, 2000 * this.shot);
       } else {
         throw new Error();
