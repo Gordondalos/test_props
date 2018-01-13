@@ -68,7 +68,7 @@ export class ScenarioComponent implements OnInit {
   }
 
   addOrRemoveValueInELement(element, valueChange, changePropRes) {
-    element.value += valueChange;
+    element.value += Number(valueChange.toFixed(2));
     element.res += changePropRes;
     if (element.res < 0) {
       element.res = 0;
